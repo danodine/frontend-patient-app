@@ -1,0 +1,192 @@
+import { StyleSheet } from "react-native";
+import {
+  COLORS,
+  getGlassStyle,
+  FONT_SIZES,
+  FONT_WEIGHT,
+  FONT_FAMILY,
+  getShadowStyle,
+} from "../../styles/theme";
+
+const styles = StyleSheet.create({
+  panel: {
+    backgroundColor: COLORS.white,
+    borderRadius: 20,
+    padding: 18,
+    marginBottom: 16,
+    ...getShadowStyle({ y: 4, blur: 12, opacity: 0.06, elevation: 3 }),
+  },
+  header: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    marginBottom: 4,
+  },
+  headerTitleWrap: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 8,
+  },
+  headerTitle: {
+    fontSize: FONT_SIZES.subtitle1,
+    fontWeight: FONT_WEIGHT.boldFontBig,
+    color: COLORS.blackText,
+    fontFamily: FONT_FAMILY.semiBold,
+  },
+  clearText: {
+    fontSize: FONT_SIZES.inputText,
+    color: COLORS.secondary,
+    fontWeight: FONT_WEIGHT.boldFont,
+    fontFamily: FONT_FAMILY.semiBold,
+  },
+  sectionLabel: {
+    fontSize: FONT_SIZES.xsText,
+    color: COLORS.greyText,
+    letterSpacing: 0.5,
+    marginTop: 16,
+    marginBottom: 8,
+    fontFamily: FONT_FAMILY.semiBold,
+    fontWeight: FONT_WEIGHT.boldFont,
+  },
+  optionRow: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    gap: 8,
+  },
+  option: {
+    paddingVertical: 9,
+    paddingHorizontal: 16,
+    borderRadius: 14,
+    borderWidth: 1,
+    borderColor: COLORS.greyBorder,
+    backgroundColor: COLORS.white,
+  },
+  optionSelected: {
+    backgroundColor: "rgba(112, 193, 227, 0.18)",
+    borderColor: COLORS.secondary,
+  },
+  optionText: {
+    fontSize: FONT_SIZES.inputText,
+    color: COLORS.greyText,
+    fontFamily: FONT_FAMILY.regular,
+  },
+  optionTextSelected: {
+    color: COLORS.secondary,
+    fontWeight: FONT_WEIGHT.boldFont,
+  },
+  selectRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    borderWidth: 1,
+    borderColor: COLORS.greyBorder,
+    borderRadius: 14,
+    paddingVertical: 12,
+    paddingHorizontal: 14,
+  },
+  selectValue: {
+    flex: 1,
+    fontSize: FONT_SIZES.inputText,
+    color: COLORS.blackText,
+    fontFamily: FONT_FAMILY.regular,
+    marginRight: 8,
+  },
+  divider: {
+    height: 1,
+    backgroundColor: COLORS.greyBorder,
+    marginTop: 18,
+  },
+  toggleRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginTop: 14,
+    gap: 8,
+  },
+  toggleLabel: {
+    flex: 1,
+    fontSize: FONT_SIZES.inputText,
+    color: COLORS.blackText,
+    fontFamily: FONT_FAMILY.regular,
+  },
+  locatingRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 8,
+    marginTop: 8,
+  },
+  hint: {
+    fontSize: FONT_SIZES.xsText,
+    color: COLORS.greyText,
+    marginTop: 8,
+    fontFamily: FONT_FAMILY.regular,
+  },
+  distanceRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginTop: 10,
+  },
+  stepper: {
+    flexDirection: "row",
+    alignItems: "center",
+    borderWidth: 1,
+    borderColor: COLORS.greyBorder,
+    borderRadius: 12,
+    overflow: "hidden",
+  },
+  stepperBtn: {
+    paddingVertical: 8,
+    paddingHorizontal: 16,
+    backgroundColor: COLORS.white,
+  },
+  stepperText: {
+    fontSize: FONT_SIZES.subtitle2,
+    fontWeight: FONT_WEIGHT.boldFont,
+    color: COLORS.secondary,
+  },
+  distanceValue: {
+    fontSize: FONT_SIZES.inputText,
+    color: COLORS.blackText,
+    fontFamily: FONT_FAMILY.semiBold,
+    minWidth: 72,
+    textAlign: "center",
+  },
+  modalOverlay: {
+    flex: 1,
+    backgroundColor: COLORS.modalOverlay ?? "rgba(0,0,0,0.4)",
+    justifyContent: "center",
+    paddingHorizontal: 24,
+  },
+  modalCard: {
+    backgroundColor: COLORS.white,
+    borderRadius: 20,
+    padding: 20,
+    maxHeight: "70%",
+  },
+  modalHeader: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    marginBottom: 12,
+  },
+  modalTitle: {
+    fontSize: FONT_SIZES.subtitle1,
+    fontWeight: FONT_WEIGHT.boldFontBig,
+    color: COLORS.blackText,
+    fontFamily: FONT_FAMILY.semiBold,
+  },
+  modalRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    paddingVertical: 14,
+    borderBottomWidth: 1,
+    borderBottomColor: COLORS.tagColor,
+  },
+  modalRowText: {
+    fontSize: FONT_SIZES.inputText,
+    color: COLORS.blackText,
+    fontFamily: FONT_FAMILY.regular,
+  },
+});
+
+export default styles;

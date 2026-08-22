@@ -1,0 +1,81 @@
+{
+  "expo": {
+    "name": "HeiDoctor",
+    "slug": "heydoc",
+    "scheme": "holadoc",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#081633"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "icon": "./assets/icon.png",
+      "bundleIdentifier": "com.heidock",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false,
+        "NSCameraUsageDescription": "HolaDoc needs camera access for video calls.",
+        "NSMicrophoneUsageDescription": "HolaDoc needs microphone access for video calls.",
+        "NSLocationWhenInUseUsageDescription": "HolaDoc uses your location to find doctors near you and filter search results by distance.",
+        "UIBackgroundModes": [
+          "voip"
+        ]
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0b1a45"
+      },
+      "googleServicesFile": "./google-services.json",
+      "package": "com.heidock",
+      "permissions": [
+        "android.permission.ACCESS_NETWORK_STATE",
+        "android.permission.INTERNET",
+        "android.permission.WAKE_LOCK",
+        "android.permission.POST_NOTIFICATIONS",
+        "android.permission.SYSTEM_ALERT_WINDOW",
+        "android.permission.FOREGROUND_SERVICE",
+        "android.permission.CAMERA",
+        "android.permission.FOREGROUND_SERVICE_CAMERA",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.MODIFY_AUDIO_SETTINGS",
+        "android.permission.FOREGROUND_SERVICE_MICROPHONE"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-secure-store",
+      "expo-asset",
+      "expo-font",
+      [
+        "@daily-co/config-plugin-rn-daily-js",
+        {
+          "enableCamera": true,
+          "enableMicrophone": true,
+          "enableScreenShare": false
+        }
+      ],
+      "@react-native-community/datetimepicker",
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "HolaDoc uses your location to find doctors near you and filter search results by distance."
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "701265b6-9f90-4f2c-b256-28732b3fca36"
+      }
+    },
+    "owner": "davidnodine"
+  }
+}
